@@ -1,4 +1,8 @@
 class Api::V1::PinsController < ApplicationController
+
+  #before_filter :check_auth
+    before_action :basic_auth
+
   def index
     render json: Pin.all.order('created_at DESC')
   end
@@ -13,7 +17,17 @@ class Api::V1::PinsController < ApplicationController
   end
 
   private
-    def pin_params
-      params.require(:pin).permit(:title, :image_url)
-    end
+  def pin_params
+    params.require(:pin).permit(:title, :image_url)
+  end
+
+  # def check_auth
+  #   authenticate_or_request_with_http_basic do |email,token|
+  #     resource = User.find_by_email(email)
+  #     if resource.api_token=token
+  #       sign_in :user, resource
+  #     end
+  #   end
+  # end
+
 end

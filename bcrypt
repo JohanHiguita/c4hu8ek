@@ -1,0 +1,14 @@
+
+#######################################################
+
+The bcrypt-ruby gem has changed its name to just bcrypt.  Instead of
+installing `bcrypt-ruby`, you should install `bcrypt`.  Please update your
+dependencies accordingly.
+
+#######################################################
+
+Successfully installed bcrypt-ruby-3.1.5-x64-mingw32
+Parsing documentation for bcrypt-ruby-3.1.5-x64-mingw32
+Installing ri documentation for bcrypt-ruby-3.1.5-x64-mingw32
+Done installing documentation for bcrypt-ruby after 2 seconds
+1 gem installed
